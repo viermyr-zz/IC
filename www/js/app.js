@@ -23,8 +23,7 @@ app.controller('MainCtrl', function($scope){
 
   // Called when "DENY FACE" button is clicked
   $scope.closeApp = function() {
-    alert("Close the application");
-    
+    navigator.app.exitApp(); // exit the app
   };
 
   // Called when "OPEN DOOR" button is clicked
@@ -35,9 +34,12 @@ app.controller('MainCtrl', function($scope){
 
   // Called when "TALK" button is clicked
   $scope.establishCommunication = function() {
+     
     alert("Start communication with the visitor");
 
   };
 });
+
+
 
 

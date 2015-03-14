@@ -18,19 +18,31 @@ app.run(function($ionicPlatform) {
   });
 });
 app.controller('MainCtrl', function($scope){
+  // DEFINE VARIABLES
   var doorOpened = true;
+
+  // Called when "DENY FACE" button is clicked
   $scope.closeApp = function() {
-    alert("Close the application");
+    setInterval(function(){alert("Close the application");}, 500);
+    navigator.app.exitApp(); // exit the app
     
-  }
+    
+  };
+
+  // Called when "OPEN DOOR" button is clicked
   $scope.openDoor = function() {
     if(doorOpened)
       alert("Door open");
-  }
+  };
+
+  // Called when "TALK" button is clicked
   $scope.establishCommunication = function() {
+     
     alert("Start communication with the visitor");
 
-  }
+  };
 });
+
+
 
 
